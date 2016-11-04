@@ -1,0 +1,9 @@
+.is-main-color {
+  background-color: #8F54B9; }
+
+.light-color {
+  background-color: #fff; }
+
+.text.light-color {
+  background-color: inherit;
+  color: #fff; }
