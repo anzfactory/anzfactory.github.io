@@ -20,3 +20,18 @@
 
 .container .page-heading .subtitle:before {
   content: '▶'; }
+
+.image.circle {
+  border-radius: 50%; }
+
+.level.start {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start; }
+
+@media screen and (max-width: 768px) {
+  .mobile-text-center {
+    margin: 0 auto; } }
