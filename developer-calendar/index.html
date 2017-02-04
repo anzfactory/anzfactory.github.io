@@ -19,6 +19,14 @@
 
   <!-- System Stylesheets-->
   <link rel="stylesheet" type="text/css" href="../app.css">
+  <style>
+  .responsiveCal {
+    position: relative; padding-bottom: 100%; height: 0; overflow: hidden;
+  }
+  .responsiveCal iframe {
+    position: absolute; top:0; left: 0; width: 100%; height: 100%;
+  }
+  </style>
 </head>
 
 <body>
@@ -57,29 +65,53 @@
   
   <section class="section">
     <div class="container">
-      <iframe src="https://calendar.google.com/calendar/embed?src=4u4vho3gu3ljegogu8ocdvoshk%40group.calendar.google.com&ctz=Asia/Tokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="yes"></iframe>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
       <div class="columns">
-        <div class="column">
-          <div class="heading">
-            <h3 class="title is-4">登録はこちらから</h3>
+        <div class="column is-8">
+          <div class="responsiveCal">
+            <iframe src="https://calendar.google.com/calendar/embed?src=4u4vho3gu3ljegogu8ocdvoshk%40group.calendar.google.com&ctz=Asia/Tokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="yes"></iframe>
           </div>
-          <a class="button is-primary" href="https://goo.gl/forms/gJu1QV5CZFwPtocz1" target="blank">登録フォーム</a>  
         </div>
-        <div class="column">
-          <div class="heading">
-            <h3 class="title is-4">削除はこちらから</h3>
+        <div class="column is-4">
+          
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                気軽に登録しよう！
+              </p>
+            </header>
+  
+            <div class="card-content">
+              <div class="content">
+                <p>
+                  アプリを登録することで...<br>
+                  <ul>
+                    <li>このカレンダーを登録している人にリリースが察知しやすくなる！？</li>
+                    <li>アプリレビュアーが見つけてくれてレビューされるかも！？</li>
+                    <li>リリース日を公言してしまったことでプレッシャーによるモチベアップ！？</li>
+                  </ul><br>
+                  このようなめりっとがあるかもしれないとかないかもしれないとか的な。
+                </p>
+                <p>
+                  削除も出来るので、さぁお気軽に！！<br>
+                  すでにリリース済みでも最近のなら是非。にぎやかな方が楽しい（笑）
+                </p>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="card-footer-item">
+                <a class="button is-inverted is-primary" href="https://goo.gl/forms/gJu1QV5CZFwPtocz1" target="blank">アプリを登録する</a>
+              </div>
+              <div class="card-footer-item">
+                <a class="button is-inverted is-danger" href="https://goo.gl/forms/ga85zosO4RzJPxNA3" target="blank">アプリを削除する</a>
+              </div> 
+            </div>
           </div>
-          <a class="button is-warning" href="https://goo.gl/forms/ga85zosO4RzJPxNA3" target="blank">削除依頼フォーム</a>
+          
         </div>
       </div>
     </div>
   </section>
-  
+
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
