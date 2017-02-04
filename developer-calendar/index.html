@@ -21,7 +21,25 @@
   <link rel="stylesheet" type="text/css" href="../app.css">
   <style>
   .responsiveCal {
-    position: relative; padding-bottom: 100%; height: 0; overflow: hidden;
+    position: relative; 
+    padding-bottom: 75%; 
+    height: 0; 
+    overflow: hidden;
+  }
+  @media screen and (max-width: 600px) {
+    .responsiveCal {
+      padding-bottom: 80%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .responsiveCal {
+      padding-bottom: 90%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .responsiveCal {
+      padding-bottom: 100%;
+    }
   }
   .responsiveCal iframe {
     position: absolute; top:0; left: 0; width: 100%; height: 100%;
@@ -73,7 +91,7 @@
         </div>
         <div class="column is-4">
           
-          <div class="card">
+          <div class="card is-fullwidth">
             <header class="card-header">
               <p class="card-header-title">
                 気軽に登録しよう！
