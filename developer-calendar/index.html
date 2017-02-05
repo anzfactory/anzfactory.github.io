@@ -88,6 +88,10 @@
           <div class="responsiveCal">
             <iframe src="https://calendar.google.com/calendar/embed?src=4u4vho3gu3ljegogu8ocdvoshk%40group.calendar.google.com&ctz=Asia/Tokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
+          <div class="has-text-right" style="margin-top:1em;">
+            <span id="sns-twitter"></span>
+            <div class="fb-share-button" data-href="https://anzfactory.github.io/developer-calendar/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fanzfactory.github.io%2Fdeveloper-calendar%2F&amp;src=sdkpreparse"></a></div>
+          </div>
         </div>
         <div class="column is-4">
           
@@ -103,6 +107,7 @@
                 <p>
                   アプリを登録することで...<br>
                   <ul>
+                    <li>リリース日が被ってしまうのを避けられるかもしれない！？</li>
                     <li>このカレンダーを登録している人がリリースが察知してDLしてくれる！？</li>
                     <li>アプリレビュアーが見つけてくれてレビューされるかも！？</li>
                     <li>リリース日を公言してしまったことでプレッシャーによるモチベアップ！？</li>
@@ -125,25 +130,25 @@
             </div>
           </div>
           
-          <div class="section">
-            <div class="container">
-              <h3 class="title is-5">使い方Tips</h3>
-              <p class="content">
-                自分のGoogleアカウントをお持ちの方はこのカレンダーをインポートすると、自身のGoogleカレンダーに同期されるようになります。<br>
-                そうすると<strong>わざわざこのサイトに来なくても確認できますよ！</strong><br>
-                さらにカレンダーの設定で通知設定をしておくと、設定したとおりに通知が行くようになるので見逃しもなくなります！<br>
-                是非インポートしてください！！
-              </p>
-              <p class="content">
-                カレンダーの右上にある「予定リスト」をクリックすると、リスト形式でみられるので、リリースされるアプリをざっと確認したいときはおすすめです！
-              </p>
-            </div>
-          </div>
-          
         </div>
       </div>
     </div>
   </section>
+  
+  <div class="section">
+    <div class="container">
+      <h3 class="title is-5">使い方Tips</h3>
+      <p class="content">
+        自分のGoogleアカウントをお持ちの方はこのカレンダーをインポートすると、自身のGoogleカレンダーに同期されるようになります。<br>
+        そうすると<strong>わざわざこのサイトに来なくても確認できますよ！</strong><br>
+        さらにカレンダーの設定で通知設定をしておくと、設定したとおりに通知が行くようになるので見逃しもなくなります！<br>
+        是非インポートしてください！！
+      </p>
+      <p class="content">
+        カレンダーの右上にある「予定リスト」をクリックすると、リスト形式でみられるので、リリースされるアプリをざっと確認したいときはおすすめです！
+      </p>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -157,6 +162,40 @@
   <script>
     Smooch.init({appToken: '7ymgwxtdkfzcnf3nez8x22tog'});
   </script>
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+      return t;
+    }(document, "script", "twitter-wjs"));
+    twttr.ready(function(twttr) {
+      twttr.widgets.createShareButton(
+        'https://anzfactory.github.io/developer-calendar/',
+        document.getElementById('sns-twitter'),
+        {
+          text: '個人開発者アプリリリースカレンダー'
+        }
+      );
+    });
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8&appId=451902004943489";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
