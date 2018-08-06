@@ -34,7 +34,18 @@
     }(window,document,"Smooch","58501c081cdd736400f57dfd");
   </script>
   <script>
-    Smooch.init({appId: '58501c081cdd736400f57dfd'}).then(function() {
+    Smooch.init({
+      appId: '58501c081cdd736400f57dfd',
+      customText: {
+          headerText: 'なにかお困りですか？',
+          introductionText: 'お気軽にメッセージをどうぞ！（即返信がない場合はしばらくしてからまたアクセスしてみて下さい！）',
+          inputPlaceholder: 'メッセージはこちらに',
+          sendButtonText: '送信'
+      },
+      customColors: {
+          brandColor: '8F54B9'
+      }
+    }).then(function() {
     });
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
